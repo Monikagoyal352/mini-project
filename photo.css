@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+}
+
+.main_box{
+   background-image: url("mona.jpg");
+   background-size: cover;
+   height: 100vh;
+}
+
+.btnOne span{
+    color: white;
+    font-size: 30px;
+    font-weight:700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+}
+.slidebar{
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgb(255, 255, 255, 0.5);
+    transition: all 0.2s linear ;
+}
+
+.slidebar .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 50px;
+    box-shadow: 0 2px 4px rgb(255, 255, 255, 0.5);
+    height: 50px;
+}
+
+.slidebar .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.slidebar .menu{
+    color: white;
+    width: 100%;
+    padding-top: 45px;
+}
+
+.btnTwo{
+    color: gray;
+    font-size: 10px;
+    line-height: 60px;
+    position: absolute;
+    left: 224px;
+    cursor: pointer;
+    /* opacity: 0; */
+}
+
+.slidebar .menu li{
+    margin-top: 7px;
+    padding: 10px 20px;
+}
+
+.slidebar .menu i, a{
+    color: white;
+    text-decoration: none;
+}
+
+.slidebar .menu i{
+    padding-right: 10px;
+}
+
+.main_box .social{
+    position: absolute;
+    left: 25%;
+    bottom: 30px;
+}
+.main_box .social i{
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+#check{
+    display: none;
+}
+.slidebar .menu li:hover{
+    box-shadow: 0 0 4px rgb(255, 255, 255, 0.5);
+}
+.btnOne:hover{
+    font-size: 40px;
+}
+.btnTwo:hover{
+    font-size: 20px;
+}
+.main_box .social i:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+#check:checked ~ .slidebar{
+    left: 0;
+}
+#check:checked ~ .btnOne span{
+    opacity: 0;
+}
